@@ -1,4 +1,4 @@
-```go
+
 // force way, two loop
 func twoSum(nums []int, target int) []int {
     var location []int
@@ -13,4 +13,4 @@ func twoSum(nums []int, target int) []int {
     }
     return location
 }
-```
+
