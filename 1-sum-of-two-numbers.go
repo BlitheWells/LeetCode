@@ -15,3 +15,23 @@ func twoSum(nums []int, target int) []int {
 }
 
 
+//Way2: use array, not a good way, because you don't know the max vlue int original array.
+func twoSumUseArray(nums []int, target int) []int {
+    var newNums [1000]int
+    for i:= 0; i < len(nums) - 1; i ++ {
+        newNums[nums[i]] = i
+    }
+    var location []int
+    var left int
+    var right int
+    for i:= 0; i < len(nums); i ++ {
+        left = nums[i]
+        right = target - left
+        if right > 0 && newNums[right] >= 0 {
+            location = []int{i, newNums[right]}
+            break;
+        }
+    }
+    return location
+}
+
